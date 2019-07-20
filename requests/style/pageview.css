@@ -1,0 +1,42 @@
+html {
+    height: 100%;
+}
+body {
+width: 100%;
+background-color: #06bcfb;
+background-image: linear-gradient(315deg, #06bcfb 0%, #4884ee 74%);
+}
+nav{
+    box-shadow: none!important;
+}
+#navbar{
+background-color: #06bcfb;
+background-image: linear-gradient(315deg, #06bcfb 2%, #4884ee 74%);
+border: transparent;
+}
+#chipProductCount{
+    margin-top:-1rem;
+}
+#titlebar{
+    font-size: 1.5rem;
+    margin-left: 4rem;
+    position: relative;
+    top:-2px;
+}
+#badge{
+    border-radius: 10px;
+}
+.card{
+    border-radius: 15px;
+}
+#titleSuccess{
+    margin-left: 1rem;
+    top:-0.5rem;
+}
+#iconBack{
+    margin-left: 0.7rem;
+}
+#card-title{
+    font-size: 18px;
+}
+

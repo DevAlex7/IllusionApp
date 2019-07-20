@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data:">
+        <meta name="format-detection" content="telephone=no">
+      
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" href="Imports/resources/css/global/materialize.min.css">
+        <link rel="stylesheet" href="Imports/resources/css/global/material-icons.css">
+        <link rel="stylesheet" href="Imports/resources/css/utilities/login.css">
+        <title>Illusion</title>
+    </head>
+    <body>
+        <div data-role="page">
+            
+            <nav class="red">
+                <div class="nav-wrapper">
+                  <a class="brand-logo">Illusion</a>
+                </div>
+            </nav>
+
+            <div class="row" id="LoginCardSignUp">
+                <div class="card">
+                    <div class="card-content">
+                        <form method="POST" id="Registrer">
+                            <span class="card-title center-align"> Registrarme </span>
+                            <div class="row">
+                                <input type="text" name="NameUser" id="NameUser">
+                                <label class="grey-text" for="name">Ingrese su nombre</label>
+                                
+                                <input type="text" name="LastName" id="LastName">
+                                <label class="grey-text" for="lastname">Ingrese su apellido</label>
+
+                                <input type="text" name="EmailUser" id="EmailUser">
+                                <label class="grey-text" for="emailUser">Ingrese su correo</label>
+
+                                <input type="text" name="Nickname" id="Nickname">
+                                <label class="grey-text" for="emailUser">Ingrese su usuario</label>
+
+                                <input type="password" name="pass" id="pass">
+                                <label for="pass">Ingrese su contraseña</label>
+
+                                <input type="password" name="pass2" id="pass2">
+                                <label for="pass">Repita su contraseña</label>
+                            </div>
+                            <div class="center">
+                                <button class="btn" id="SignUpButtonR" type="submit"> <i class="material-icons right">person_pin</i> Registrarme</button>
+                                <a href="index.html" class="btn" id="LoginButtonR"> <i class="material-icons right">near_me</i> Iniciar sesion</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="Imports/resources/js/global/materialize.min.js"></script>
+        <script type="text/javascript" src="js/Helpers/Helpers.js"></script>
+        <script type="text/javascript" src="js/Controller/ControllerIndex.js"></script>
+    </body>
+</html>

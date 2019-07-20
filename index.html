@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="Imports/resources/css/global/materialize.min.css">
+        <link rel="stylesheet" href="Imports/resources/css/global/material-icons.css">
+        <link rel="stylesheet" href="Imports/resources/css/utilities/login.css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <title>Illusion</title>
+    </head>
+    <body>
+        <div data-role="page">
+            <nav class="red">
+                <div class="nav-wrapper">
+                  <a class="brand-logo">Illusion</a>
+                </div>
+            </nav>
+
+            <div class="row" id="LoginCard">
+                <div class="card">
+                    <div class="card-content">
+                        <form method="POST" id="SignIn">
+                            <span class="card-title center-align">Log in</span>
+                            <div class="row">
+                                <input type="text" name="Nickname" id="Nickname">
+                                <label class="grey-text" for="Nickname">Ingrese su usuario</label>
+                                <input type="password" name="pass" id="pass">
+                                <label for="pass">Ingrese su contraseña</label>
+                            </div>
+                            <div class="row center">
+                                <button type="submit" id="LoginButton" class="btn"> <i class="material-icons right">near_me</i> Iniciar Sesión</button>
+                            </div>
+                            <div class="row center">
+                                <a href="signUp.html" id="SignUpButton" class="btn"> <i class="material-icons right">person_pin</i> Registrarme</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <script src="js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="Imports/resources/js/global/materialize.min.js"></script>
+        <script type="text/javascript" src="js/Helpers/Helpers.js"></script>
+        <script type="text/javascript" src="user/classes/User.js"></script>
+        <script type="text/javascript" src="js/Controller/ControllerIndex.js"></script>
+    </body>
+</html>

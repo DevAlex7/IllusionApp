@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../Imports/resources/css/global/materialize.min.css">
+    <link rel="stylesheet" href="../../Imports/resources/css/global/material-icons.css">
+    <link rel="stylesheet" href="../../Imports/resources/css/utilities/home.css">
+    
+    <title>Home</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col s10 push-s1">
+            <div class="card">
+                <div class="card-content">
+                    <div class="center">
+                        <i class="material-icons">person</i>
+                        <span class="card-title">¡Bienvenido!</span>
+                        <span class="card-title" id="fullname"></span>
+                        <span id="email"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="preloader-background">
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+                <ul class="collection z-depth-2">
+                    <li class="collection-item" onclick="redirectRequest()"><div>Mis Solicitudes<a class="secondary-content"><i class="material-icons grey-text">chevron_right</i></a></div></li>
+                    <li class="collection-item" onclick="redirectProfile()"><div>Mi perfil<a class="secondary-content"><i class="material-icons grey-text">chevron_right</i></a></div></li>
+                    <li class="collection-item" onclick="redirectProducts()"><div>Productos<a class="secondary-content"><i class="material-icons grey-text">chevron_right</i></a></div></li>
+                    <li class="collection-item" onclick="redirectSecurity()"><div>Olvidé mi contraseña<a class="secondary-content"><i class="material-icons grey-text">chevron_right</i></a></div></li>
+                </ul>
+        </div>
+    </div>
+   
+<script src="../../js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="../../Imports/resources/js/global/materialize.min.js"></script>
+<script type="text/javascript" src="../../js/Helpers/Helpers.js"></script>
+<script type="text/javascript" src="../classes/User.js"></script>
+<script type="text/javascript" src="../controllers/homeController.js"></script>
+</body>
+</html>

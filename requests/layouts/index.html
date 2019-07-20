@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../Imports/resources/css/global/materialize.min.css">
+    <link rel="stylesheet" href="../../Imports/resources/css/global/material-icons.css">
+    <link rel="stylesheet" href="../../Imports/resources/css/utilities/requests.css">
+    <link rel="stylesheet" href="../style/request_page.css">
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+</head>
+<body>
+    <div class="row">
+        <a href="../../user/layouts/home.html" class="btn white-text transparent" id="backBtn"> Atras </a>
+    </div>
+    <div class="row">
+        <div class="center">
+            <h4 class="white-text">Solicitudes</h4>
+        </div>
+    </div>
+    <div class="preloader-background">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="requestsResult">
+        
+    </div>
+    <script src="../../js/jquery-2.2.3.min.js"></script>    
+    <script type="text/javascript" src="../../Imports/resources/js/global/materialize.min.js"></script>
+    <script type="text/javascript" src="../../Imports/resources/js/global/moment.min.js"></script>
+    <script type="text/javascript" src="../../js/Helpers/Helpers.js"></script>
+    <script type="text/javascript" src="../../user/classes/User.js"></script>
+    <script type="text/javascript" src="../classes/Request.js"></script>
+    <script type="text/javascript" src="../controllers/requestsController.js"></script>    
+</body>
+</html>

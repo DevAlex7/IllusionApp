@@ -1,0 +1,22 @@
+html{
+    background-image: url('../../pics/utilities/Party.jpg');
+}
+#LoginCard{
+    margin-top: 30%;
+}
+#LoginCardSignUp{
+    margin-top: 10%;
+}
+#LoginButton{
+    background-color: #011638;
+}
+#SignUpButton{
+    background-color: #E51610;
+}
+#LoginButtonR{
+    margin-top: 1rem;
+    background-color: #011638;
+}
+#SignUpButtonR{
+    background-color: #E51610;
+}
