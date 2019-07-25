@@ -10,7 +10,42 @@
     <link rel="stylesheet" href="../style/index.css">
 </head>
 <body>
-    
+    <div class="row">
+        <a href="index.html" class="btn white-text transparent left" id="back"> <i class="material-icons" id="iconBack" >arrow_back</i> </a>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-image">
+                    <div class="card-image">
+                        <img src="" id="ImageProduct">
+                    </div>
+                </div>
+            </div>
+            <div class="card z-depth-4" id="informationProduct">
+                <div class="card-content">
+                    <span class="card-title white-text" id="NameP"></span>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="center">
+                                <a onclick="setAction(1)"> <i class="material-icons white-text" id="iconlike">thumb_up</i></a>
+                                <label for="" class="white-text" id="labelNumberLikes"></label>
+                                <a onclick="setAction(2)"> <i class="material-icons white-text" id="icondislike">thumb_down</i></a>
+                                <label for="" class="white-text" id="labelNumberdisLikes"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Mis solicitudes agregados</div>
+                    <div class="collapsible-body white" id="requestsRead">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
     <script src="../../js/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="../../Imports/resources/js/global/materialize.min.js"></script>
     <script type="text/javascript" src="../../js/Helpers/Helpers.js"></script>

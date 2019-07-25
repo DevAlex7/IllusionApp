@@ -14,8 +14,8 @@ function spinner(){
     });
 }
 $('#closeSesion').click(function(e){
-    //localStorage.removeItem('user');
-    //person.route.login();
+    localStorage.removeItem('user');
+    person.route.login();
 })
 $('#editInformation').click(function (e) { 
     person.route.editProfile();

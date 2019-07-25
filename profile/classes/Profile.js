@@ -13,7 +13,7 @@ class Profile extends User {
         homeView:'../../user/layouts/home.html',
         editView :'edit-profile.html',
         profileView : 'profile.html',
-        resetView:'reset-password',
+        resetView:'reset-password.html',
 
         login(){
             $(location).attr('href',this.loginView);

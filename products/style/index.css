@@ -19,11 +19,35 @@ body {
 	right: 0;
 	bottom: 0;	
 }
-#iconUp{
+
+#iconBack
+{
+	position: relative;
+	font-size: 4vh;
+	right: 1vh;
+}
+
+#informationProduct{
+	margin-top:-1.5rem;
+	border-radius: 1rem;
+	background-color:rgb(59, 59, 156);
+}
+#icondislike{
 	margin-left: 1.2rem;
+}
+#labelNumberLikes{
+	position: relative;
+	top:2.5vh;
+	right:3.5vh;
+}
+#labelNumberdisLikes{
+	position: relative;
+	top:2.5vh;
+	right:3.5vh;
 }
 #back{
 	margin-top:0.5rem;
 	margin-left: 0.3rem;
 	box-shadow: none!important;
+	
 }

@@ -21,6 +21,8 @@ function backHome(){
 function sendEmail(){
     let content ='';
     code = getRandom(5);
+    alert(app.Information.get().email);
+    
     var template_params = {
         to_name: app.Information.get().name,
         from_name: app.Information.get().email,
