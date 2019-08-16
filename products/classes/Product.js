@@ -4,12 +4,30 @@ class Product extends User {
         super();
     }
     
-    //Rutas de api
-    getApi = 'https://playaes.000webhostapp.com/Api/products.php?request=GET&action=';
+    
+
+    //Rutas de api externas
+    /*getApi = 'https://playaes.000webhostapp.com/Api/products.php?request=GET&action=';
+    
     pictureApi = 'https://playaes.000webhostapp.com/Imports/pics/products/';
+    
     postApi = 'https://playaes.000webhostapp.com/Api/products.php?request=POST&action=';
+    
     deleteApi = 'https://playaes.000webhostapp.com/Api/products.php?request=DELETE&action=';
+    
     postVote = 'https://playaes.000webhostapp.com/Api/votes_products.php?request=POST&action=';
+
+    */
+
+    getApi = '../../api/products.php?request=GET&action=';
+    
+    //pictureApi = 'https://playaes.000webhostapp.com/Imports/pics/products/';
+    
+    postApi = '../../api/products.php?request=POST&action=';
+    
+    deleteApi = '../../api/products.php?request=DELETE&action=';
+    
+    postVote = '../../api/votes_products.php?request=POST&action=';
     
     route = {
         products : '../layouts/index.html',

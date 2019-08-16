@@ -1,31 +1,29 @@
 $(document).ready(function () {
-    spinner(); 
-    callmyRequests();
+    spinner();
+    callRequest(); 
 });
-
-const request = new Request();
-
 function spinner(){
     setTimeout(function(){ 
-    $('.preloader-background').delay(1500).fadeOut('slow');
-	$('.preloader-wrapper')
-		.delay(1500)
-		.fadeOut();
-    });
+        $('.preloader-background').delay(1500).fadeOut('slow');
+        $('.preloader-wrapper')
+            .delay(1500)
+            .fadeOut();
+        });
 }
-//Funcion para leer todas las solicitudes
 function setRequests(rows){
     let content='';
     if(rows.length>0){
         rows.forEach(function(row){
             var fecha = moment(row.date_event);
+            
             if(row.statusId == 1){
                 content+=`
                 <div class="col s12">
-                    <ul class="collection z-depth-1" onClick="showEvent(${row.id})">
+                    <ul class="collection z-depth-1" onClick="showEvent(${row.id})" id="collection-card">
                         <li class="collection-item">
                             <span class="title">${row.name_event}</span>
                             <p class="title">Fecha de evento: ${ fecha.lang('es').format('dddd D MMMM , YYYY') }</p>
+                            <p class="title">Usuario solicitante: ${ row.fullname }</p>
                             <li class="collection-item"><div>Estado: ${row.status}<a class="secondary-content"><i class="material-icons green-text accent-4"> check </i></a></div></li>
                         </li>
                     </ul>
@@ -35,7 +33,7 @@ function setRequests(rows){
             else if(row.statusId == 2){
                 content+=`
                 <div class="col s12">
-                    <ul class="collection z-depth-1" onClick="showEvent(${row.id})">
+                    <ul class="collection z-depth-1" onClick="showEvent(${row.id})" id="collection-card">
                         <li class="collection-item">
                             <span class="title">${row.name_event}</span>
                             <p class="title">Fecha de evento: ${ fecha.lang('es').format('dddd D MMMM , YYYY') }</p>
@@ -48,7 +46,7 @@ function setRequests(rows){
             else if(row.statusId == 3){
                 content+=`
                 <div class="col s12">
-                    <ul class="collection z-depth-1" onClick="showEvent(${row.id})">
+                    <ul class="collection z-depth-1" onClick="showEvent(${row.id})" id="collection-card">
                         <li class="collection-item">
                             <span class="title">${row.name_event}</span>
                             <p class="title">Fecha de evento: ${ fecha.lang('es').format('dddd D MMMM , YYYY') }</p>
@@ -59,22 +57,19 @@ function setRequests(rows){
                 `;
             }
             else{
-
             }
         })
     }
-    $('#requestsResult').html(content);
+    $('#requestList').html(content);
 }
 //Petición para obtener las solicitudes del usuario
-function callmyRequests(){
-    var id = new User().Information.get().id;
+function callRequest(){
+    
     $.ajax(
         {
-            url:callPOST('Request','myRequests'),
+            url: callGET('Request','getRequest'),
             type:'POST',
-            data:{
-                id
-            },
+            data:null,
             datatype:'JSON'
         }
     )
@@ -82,7 +77,7 @@ function callmyRequests(){
         {
             if(isJSONString(response)){
                 const result = JSON.parse(response);
-                if(result.status != 1){
+                if(!result.status){
                     ToastError("No hay información");
                 }
                 setRequests(result.dataset);    
@@ -93,9 +88,6 @@ function callmyRequests(){
         }
     )
     .fail(function(jqXHR){
+        console.log('error')
     })
-}
-const showEvent = (id) => {
-    request.getRequestId(id);
-    request.viewRequest();
 }

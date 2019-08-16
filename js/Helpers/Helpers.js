@@ -21,12 +21,15 @@ function CheckDecimal(val) {
   } 
 
 function callGET(API,Action){
-  const APIGet = 'https://playaes.000webhostapp.com/Api/'+API+'.php?request=GET&action='+Action;
+  //const APIGet = 'https://playaes.000webhostapp.com/Api/'+API+'.php?request=GET&action='+Action;
+  const APIGet = '../../../api/'+ API +'.php?request=GET&action='+Action;
   return APIGet;
 }
 
 function callPOST(API,Action){
-  const APIGet = 'https://playaes.000webhostapp.com/Api/'+API+'.php?request=POST&action='+Action;
+
+  //const APIGet = 'https://playaes.000webhostapp.com/Api/'+API+'.php?request=POST&action='+Action;
+  const APIGet = '../../api/'+API+'.php?request=POST&action='+Action;
   return APIGet;
 }
 
@@ -62,11 +65,15 @@ function isJSONString(string)
 
 //Login
 function requestPOST(API, Action){
-    const APIPost = 'https://playaes.000webhostapp.com/Api/'+ API + '.php?request=POST&action='+Action;
+
+    //const APIPost = 'https://playaes.000webhostapp.com/Api/'+ API + '.php?request=POST&action='+Action;
+    const APIPost = 'api/'+ API + '.php?request=POST&action='+Action;
+  
     return APIPost;
 }
 function requestGET(API,Action){
-    const APIGet = 'https://playaes.000webhostapp.com/Api/'+ API + '.php?request=GET&action='+Action;
+    //const APIGet = 'https://playaes.000webhostapp.com/Api/'+ API + '.php?request=GET&action='+Action;
+    const APIGet = 'api/'+ API + '.php?request=GET&action='+Action;
     return APIGet;
 }
 

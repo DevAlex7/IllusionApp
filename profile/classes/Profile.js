@@ -2,10 +2,11 @@ class Profile extends User {
     
     constructor(){
         super();
-        emailjs.init("user_AsWDa2hloMuYb0pdQrffY");
+        //emailjs.init("user_AsWDa2hloMuYb0pdQrffY");
     }
     
-    apiPut ='https://playaes.000webhostapp.com/Api/userEmployees.php?request=PUT&action=';
+    //apiPut ='https://playaes.000webhostapp.com/Api/userEmployees.php?request=PUT&action=';
+    apiPut ='../api/userEmployees.php?request=PUT&action=';
     
     route = {
         

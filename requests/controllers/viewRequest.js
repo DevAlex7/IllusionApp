@@ -7,6 +7,7 @@ $(document).ready(function () {
     request.post('productsInNotListRequest');
     viewListProduct();
 }); 
+
 function verify(){
     request.post('verifyStatus');
 }

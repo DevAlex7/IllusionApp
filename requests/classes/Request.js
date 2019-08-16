@@ -1,8 +1,14 @@
 class Request{
 
-    //Rutas de api
-    getApi = 'https://playaes.000webhostapp.com/Api/Request.php?request=GET&action=';
-    postApi = 'https://playaes.000webhostapp.com/Api/Request.php?request=POST&action=';
+    //Rutas de api local
+    getApi = '../../api/Request.php?request=GET&action=';
+    //ruta api para enviar información
+    postApi = '../../api/Request.php?request=POST&action=';
+
+    //Rutas de api local
+    //getApi = 'https://playaes.000webhostapp.com/Api/Request.php?request=GET&action=';
+    //ruta api para enviar información
+    //postApi = 'https://playaes.000webhostapp.com/Api/Request.php?request=POST&action=';
     
 
     //rutas de paginación
@@ -24,11 +30,12 @@ class Request{
            
         }
     }
+
     //Metodo post
     post(endpoint){
         
         switch(endpoint){
-            
+            //Metodo para verificar el estado de la solicitud        
             case 'verifyStatus':
                 
                     var id = new User().Information.get().id;
@@ -72,7 +79,9 @@ class Request{
 
                     })
             break;
+            //Mostrar los productos que no existen en la tabla de los productos de la solicitud
             case 'productsInNotListRequest':
+
                     var id_request = localStorage.getItem('idRequest');
                     const list_id_request ={
                         id : id_request
@@ -104,6 +113,8 @@ class Request{
                         }
                     })
                 break;
+
+            //Obtener toda la información de la solicitud seleccionada
             case 'getmyRequest':
                 var id = localStorage.getItem('idRequest')
 
@@ -128,6 +139,7 @@ class Request{
                     }
                 })
             break;
+            //Se le asigna la solicitud al evento
             case 'getEvent':
                 var id = localStorage.getItem('idRequest');
 
@@ -140,7 +152,6 @@ class Request{
                         const result = JSON.parse(response);
                         if(result.status){
                             localStorage.setItem('idEvent',result.dataset.eventId);
-                            
                         }
                         else{
                             ToastError(result.exception);
