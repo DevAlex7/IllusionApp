@@ -35,6 +35,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
                         $result['exception']='No hay solicitudes';
                     }
                     break;
+                    case 'listRequestDate':
+                        if($result['dataset']=Request::getRequestDates()){
+                            $result['status']=1;
+                        }
+                        else{
+                            $result['exception']='No hay solicitudes';
+                        }
+                    break;
                     default:
                     exit('acción no disponible');
                 }

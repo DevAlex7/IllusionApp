@@ -7,7 +7,7 @@
     <title>Admin</title>
     <link rel="stylesheet" href="../../../Imports/resources/css/global/materialize.min.css">
     <link rel="stylesheet" href="../../../Imports/resources/css/global/material-icons.css">
-    <link rel="stylesheet" href="../../../Imports/resources/css/utilities/adminrequest.css">
+    <link rel="stylesheet" href="../../../Imports/resources/css/utilities/adminstadistics.css">
     <script type="text/javascript" src="../../../js/jquery.js"></script>
 </head>
 <body>
@@ -35,11 +35,41 @@
         </div>
         <div class="col s12">
             <div class="col s12">
-                <h5 id="personalTitle">Solicitudes</h5>
+                <h5 id="personalTitle">Estadisticas</h5>
             </div>
             <div class="col s12">
-                <div id="listRequest">
-                    <div id="requestList" class="row">
+                <div id="listCharts">
+                    <div class="card z-depth-2" id="card-canvas-requests">
+                        <div class="card-content">
+                            <span id="titleChartRequest" class="card-title">N° de solicitudes enviadas por fecha</span>
+                            <div id="canvasRequest">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12">
+                <div id="listCharts">
+                    <div class="card z-depth-2" id="productsChart">
+                        <div class="card-content">
+                            <div class="row">
+                                <a class="col s12 black-text" id="titleChartRequest"> Productos </a>
+                                <a id="descOption" class="col s2 right"> <i class="material-icons">arrow_drop_up</i> </a>
+                                <a id="ascOption" class="col s2 right"> <i class="material-icons">arrow_drop_down</i> </a>
+                            </div>
+                            <div id="canvasProducts">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12">
+                <div id="listCharts">
+                    <div class="card">
+                        <div class="card-content">
+                            <div id="canvasProductsUsed" class="row">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,10 +90,10 @@
 -->
 <script src="../../../js/jquery-2.2.3.min.js"></script>
 <script type="text/javascript" src="../../../Imports/resources/js/global/materialize.min.js"></script>
-<script type="text/javascript" src="../../../Imports/resources/js/global/jspdf.debug.js"></script>
+<script type="text/javascript" src="../../../Imports/resources/js/global/chart.js"></script>
+<script type="text/javascript" src="../../../helpers/charts.js"></script>
 <script type="text/javascript" src="../../../js/Helpers/Helpers.js"></script>
 <script type="text/javascript" src="../../../user/classes/User.js"></script>
-<script type="text/javascript" src="../../../Imports/resources/js/global/moment.min.js"></script>
-<script type="text/javascript" src="../../../user/controllers/adminRequest.js"></script>
+<script type="text/javascript" src="../../../user/controllers/adminCharts.js"></script>
 </body>
 </html>

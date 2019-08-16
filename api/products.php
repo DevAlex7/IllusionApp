@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
                     break;
                      //This action is for select all products
                     case 'AllList':
-                        if($result['dataset']=$select->allFrom('products')){
+                        if($result['dataset']=$product->all($_POST['default_option'])){
                             $result['status']=1;
                         }
                         else{

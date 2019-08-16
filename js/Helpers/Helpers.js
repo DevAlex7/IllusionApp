@@ -33,6 +33,13 @@ function callPOST(API,Action){
   return APIGet;
 }
 
+function adminPOST(API,Action){
+
+  //const APIGet = 'https://playaes.000webhostapp.com/Api/'+API+'.php?request=POST&action='+Action;
+  const APIGet = '../../../api/'+API+'.php?request=POST&action='+Action;
+  return APIGet;
+}
+
 function getProperties(response){
     properties = {
         status : response.status,

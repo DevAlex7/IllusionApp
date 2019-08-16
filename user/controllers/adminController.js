@@ -10,5 +10,9 @@ function spinner(){
 		.fadeOut();
     });
 }
-$('#cardReports').click(function(){
+$('#cardRequest').click(function(){
+    location.href='requests.html';
+})
+$('#cardEstadistics').click(function(){
+    location.href='stadistics.html';
 })

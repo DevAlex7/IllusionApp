@@ -43,8 +43,22 @@ main {
 #personalTitleUsername{
 	font-weight: 600;
 }
-#listRequest{
+#listCharts{
 	margin-top:1rem;
+}
+#titleChartRequest{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+#card-canvas-requests{
+    border-radius: 1rem;
+}
+#productsChart{
+    border-radius: 1rem;
+}
+#canvasShowProducts{
+    height: 10px;
+    width: 10px;
 }
 #titleRequest{
 	font-weight: 600;

@@ -124,6 +124,11 @@ class Request{
         $params=array(static::$status, static::$id);
         return Database::executeRow($sql,$params);
     }
+    public static function getRequestDates(){
+        $sql='SELECT requests.date_request, COUNT(requests.id) AS countTotal FROM requests GROUP BY requests.date_request ORDER BY requests.date_request DESC';
+        $params = array(null);
+        return Database::getRows($sql,$params);
+    }
     
 }
 ?>

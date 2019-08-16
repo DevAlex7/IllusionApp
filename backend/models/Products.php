@@ -151,6 +151,11 @@ class Product extends Validator{
         $params = array($this->id);
         return Database::executeRow($sql,$params);
     }
+    public function all($option){
+        $sql="SELECT * FROM products ORDER BY products.count $option";
+        $params=array($option);
+        return Database::getRows($sql,$params);
+    }
     
 
 }
