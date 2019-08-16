@@ -9,6 +9,14 @@ main {
 #footer{
 	margin-bottom: 10px;
 }
+#personalWelcome{
+	font-size: 1.5em;
+
+}
+#navbarPart{
+	border-bottom-left-radius: 25px;
+	background-color: rgb(74, 74, 238);
+}
 .preloader-background {
 	display: flex;
 	align-items: center;
